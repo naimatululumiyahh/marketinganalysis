@@ -53,8 +53,6 @@ df_validation['Income'] = df_validation['Income'].str.replace('$','')
 df_validation['Income'] = df_validation['Income'].str.replace(',','')
 df_test['Income'] = df_test['Income'].str.replace('$','')
 df_test['Income'] = df_test['Income'].str.replace(',','')
-
-
 #after removing the symbol, we can convert the datatype to float64
 df_train['Income'] = df_train['Income'].astype('float64')
 df_validation['Income'] = df_validation['Income'].astype('float64')
@@ -159,7 +157,6 @@ numeric_feat = ['Income', 'Kidhome', 'Teenhome', 'Recency', 'Complain', 'Custome
 all_numeric_feat = cmp_feat + mnt_feat + num_feat + numeric_feat
 
 
-
 #Preprocessing Data (CATEGORICAL PROCESSING)
 #we will convert the categorical features to numerical features using one-hot encoding
 
@@ -262,3 +259,5 @@ plt.yticks(range(10), [X_test_final.columns[i] for i in indices])
 plt.xlabel("Mean Importance")
 plt.tight_layout()
 plt.show()
+
+
